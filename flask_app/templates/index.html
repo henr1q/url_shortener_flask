@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Url Shortener</title>
+</head>
+<body>
+
+<form method="post">
+    {{ form.csrf_token }}
+    <label>Insert the URL to be shortened</label>
+    {{ form.url }}
+    {{ form.submit }}
+</form>
+
+</body>
+</html>
