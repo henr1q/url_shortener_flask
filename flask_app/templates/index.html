@@ -4,14 +4,19 @@
     <meta charset="UTF-8">
     <title>Url Shortener</title>
 </head>
+
 <body>
 
-<form method="post">
-    {{ form.csrf_token }}
-    <label>Insert the URL to be shortened</label>
-    {{ form.url }}
-    {{ form.submit }}
-</form>
+    <form method="POST">
+      {{ form.csrf_token }}
+      <label class="form-label">Insert the URL to be shortened</label>
+      {{ form.url(class_="form-control") }}
+      <button type="submit" class="btn btn-primary">Shorten URL</button>
+    </form>
+    
+    {% if shortened %}
+        <h3> Your shortened URL</h3>
+        <p> {{ shortened }}</p>
+    {% endif %}
 
 </body>
-</html>
