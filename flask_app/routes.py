@@ -3,6 +3,7 @@ from flask_app.forms import UrlForm
 from flask_app.models import db, Urls
 import secrets
 
+
 web_bp = Blueprint('web_bp', __name__)
 api_bp = Blueprint('api_bp', __name__)
 
